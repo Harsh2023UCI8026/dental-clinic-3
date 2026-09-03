@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Calendar, Phone, Award, Users, ShieldCheck, Star } from "lucide-react";
+import { Calendar, Phone, ShieldCheck, Star } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -81,7 +81,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Column: Doctor & Clinic Photography Card */}
+          {/* Right Column: Lead Dental Surgeon Real Photo */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -89,13 +89,18 @@ export default function Hero() {
             className="lg:col-span-5 relative"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
-              {/* Doctor Visual Presentation */}
-              <div className="h-[400px] sm:h-[480px] bg-gradient-to-br from-[#123B5D] to-[#2D7D7A] p-6 flex flex-col justify-between text-white relative">
-                {/* Background Texture / Abstract Accent */}
-                <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] opacity-10"></div>
+              {/* Doctor Visual Presentation with Real Photo */}
+              <div className="h-[420px] sm:h-[500px] relative flex flex-col justify-between text-white overflow-hidden group">
+                <img
+                  src="/images/dr-soni.jpg"
+                  alt="Dr. Soni - Lead Dental Surgeon"
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Gradient overlay for readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2338] via-[#123B5D]/40 to-transparent"></div>
                 
-                <div className="relative z-10 flex justify-between items-start">
-                  <span className="bg-white/20 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/30">
+                <div className="relative z-10 p-6 flex justify-between items-start">
+                  <span className="bg-[#123B5D]/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/30 shadow">
                     Lead Dental Surgeon
                   </span>
                   <div className="flex items-center gap-1 bg-amber-400 text-[#123B5D] px-2.5 py-1 rounded-full text-xs font-bold shadow">
@@ -104,33 +109,30 @@ export default function Hero() {
                   </div>
                 </div>
 
-                {/* Doctor Avatar / Illustration Card */}
-                <div className="relative z-10 my-auto text-center space-y-3">
-                  <div className="w-28 h-28 mx-auto rounded-full bg-white text-[#123B5D] flex items-center justify-center font-serif text-4xl font-bold shadow-xl border-4 border-[#EBF5F5]">
-                    DS
-                  </div>
+                {/* Bottom Details Overlay */}
+                <div className="relative z-10 p-6 space-y-3">
                   <div>
-                    <h3 className="font-serif text-2xl font-bold text-white">Dr. Soni</h3>
-                    <p className="text-xs text-slate-200 font-medium">
+                    <h3 className="font-serif text-3xl font-bold text-white drop-shadow-md">Dr. Soni</h3>
+                    <p className="text-xs text-slate-200 font-medium drop-shadow">
                       BDS, MDS (Gold Medalist) • Senior Implantologist
                     </p>
                   </div>
-                </div>
 
-                <div className="relative z-10 bg-white/10 backdrop-blur-md rounded-xl p-3 border border-white/20 text-xs flex justify-around text-center">
-                  <div>
-                    <span className="block font-bold text-white">BDS, MDS</span>
-                    <span className="text-slate-200">Qualifications</span>
-                  </div>
-                  <div className="border-r border-white/20"></div>
-                  <div>
-                    <span className="block font-bold text-white">15+ Yrs</span>
-                    <span className="text-slate-200">Practice</span>
-                  </div>
-                  <div className="border-r border-white/20"></div>
-                  <div>
-                    <span className="block font-bold text-white">Shela, Bopal</span>
-                    <span className="text-slate-200">Location</span>
+                  <div className="bg-[#123B5D]/85 backdrop-blur-md rounded-xl p-3 border border-white/20 text-xs flex justify-around text-center shadow-lg">
+                    <div>
+                      <span className="block font-bold text-white">BDS, MDS</span>
+                      <span className="text-slate-200">Qualifications</span>
+                    </div>
+                    <div className="border-r border-white/20"></div>
+                    <div>
+                      <span className="block font-bold text-white">15+ Yrs</span>
+                      <span className="text-slate-200">Practice</span>
+                    </div>
+                    <div className="border-r border-white/20"></div>
+                    <div>
+                      <span className="block font-bold text-white">Shela, Bopal</span>
+                      <span className="text-slate-200">Location</span>
+                    </div>
                   </div>
                 </div>
               </div>

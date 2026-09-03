@@ -5,6 +5,7 @@ import SmileAssessment from "@/components/interactive/SmileAssessment";
 import TreatmentsGrid from "@/components/sections/TreatmentsGrid";
 import BeforeAfterGallery from "@/components/interactive/BeforeAfterGallery";
 import SterilizationSection from "@/components/sections/SterilizationSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import CostCalculator from "@/components/interactive/CostCalculator";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import EmergencyTriage from "@/components/interactive/EmergencyTriage";
@@ -41,71 +42,8 @@ export default function Home() {
       {/* 7. Safety & Sterilization Protocol */}
       <SterilizationSection />
 
-      {/* 8. Verified Patient Reviews & Google Badge */}
-      <section className="py-16 bg-white border-t border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal direction="up" delay={0.1}>
-            <div className="text-center space-y-3 mb-12">
-              <span className="text-[#2D7D7A] font-semibold text-xs uppercase tracking-wider">
-                Patient Testimonials
-              </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#123B5D]">
-                Stories of Transformed Smiles
-              </h2>
-              <div className="flex items-center justify-center gap-2 text-amber-500 text-sm font-bold">
-                <span>★★★★★ 4.9/5.0</span>
-                <span className="text-slate-500 font-normal">from 520+ verified Google reviews</span>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Ananya Mehta",
-                treatment: "Invisible Clear Aligners",
-                review:
-                  "Dr. Soni explained the entire aligner process transparently. My teeth straightening took 8 months and nobody even noticed I was wearing aligners!",
-                rating: 5,
-              },
-              {
-                name: "Vikram Patel",
-                treatment: "Root Canal + Zirconia Crown",
-                review:
-                  "I was terrified of root canals due to past painful experiences elsewhere. Dr. Soni's painless technique was unbelievable—zero pain during or after!",
-                rating: 5,
-              },
-              {
-                name: "Neha Joshi",
-                treatment: "Laser Teeth Whitening",
-                review:
-                  "Got my teeth whitened before my wedding. Super clean clinic, strict sterilization, and very warm staff. Highly recommended in Shela Bopal!",
-                rating: 5,
-              },
-            ].map((story, idx) => (
-              <ScrollReveal key={idx} delay={idx * 0.12} direction="up">
-                <div className="bg-[#F8FAF9] p-6 rounded-2xl border border-slate-200 space-y-3 shadow-sm flex flex-col justify-between h-full">
-                  <div className="space-y-2">
-                    <div className="flex text-amber-400 text-xs">★★★★★</div>
-                    <p className="text-slate-700 text-xs sm:text-sm leading-relaxed italic">
-                      "{story.review}"
-                    </p>
-                  </div>
-                  <div className="pt-4 border-t border-slate-200/60 flex justify-between items-center text-xs">
-                    <div>
-                      <span className="font-bold text-[#123B5D] block">{story.name}</span>
-                      <span className="text-[#2D7D7A] font-medium">{story.treatment}</span>
-                    </div>
-                    <span className="text-[10px] text-slate-400 bg-white px-2 py-1 rounded border">
-                      Verified Patient
-                    </span>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* 8. Interactive Patient Testimonials & Review Submission */}
+      <TestimonialsSection />
 
       {/* 9. Cost & EMI Estimator */}
       <ScrollReveal direction="up" delay={0.1}>

@@ -77,7 +77,9 @@ export default function SterilizationSection() {
               </div>
             </div>
             <a
-              href="tel:+919876543210"
+              href="https://wa.me/919876543210?text=Hello%20Floss%20%26%20Gloss%20Dental%20Clinic%2C%20I%20have%20a%20question%20regarding%20your%20sterilization%20and%20hygiene%20standards."
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-5 py-2.5 rounded-lg bg-emerald-600 text-white font-semibold text-xs sm:text-sm hover:bg-emerald-500 transition-colors shrink-0"
             >
               Inquire About Hygiene Standards
