@@ -99,10 +99,10 @@ export default function BeforeAfterGallery() {
 
             {/* Before Image Layer (Clipped Top) */}
             <div
-              className="absolute inset-y-0 left-0 overflow-hidden border-r-2 border-white shadow-2xl"
+              className="absolute inset-y-0 left-0 overflow-hidden border-r-2 border-white shadow-2xl z-10"
               style={{ width: `${sliderPosition}%` }}
             >
-              <div className="relative w-full h-full min-w-[320px] sm:min-w-[700px]">
+              <div className="absolute inset-y-0 left-0 w-[300px] sm:w-[672px] h-full">
                 <img
                   src={activeCase.beforeImg}
                   alt={activeCase.beforeText}
